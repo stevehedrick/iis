@@ -1,7 +1,7 @@
 if defined?(ChefSpec)
 
-  def config_iis_config(command)
-    ChefSpec::Matchers::ResourceMatcher.new(:iis_config, :config, command)
+  def set_iis_config(command)
+    ChefSpec::Matchers::ResourceMatcher.new(:iis_config, :set, command)
   end
 
   [:config, :add, :delete].each do |action|
